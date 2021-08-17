@@ -10,9 +10,9 @@ Metadata:
     LicenseUrl: LICENSE.txt
     ReadmeUrl: README.md
     Labels: ['lambda', 'cron']
-    HomePageUrl: https://github.com/lumigo/SAR-Lambda-Janitor
+    HomePageUrl: https://github.com/praveenpravigit/SAR-Lambda-Janitor
     SemanticVersion: 1.5.0
-    SourceCodeUrl: https://github.com/lumigo/SAR-Lambda-Janitor
+    SourceCodeUrl: https://github.com/praveenpravigit/SAR-Lambda-Janitor
 
 Resources:
   Clean:
