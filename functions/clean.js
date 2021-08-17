@@ -3,7 +3,6 @@ const Lambda = require("./lib/lambda");
 const log = require("@dazn/lambda-powertools-logger");
 
 let functions = [];
-let currentFunctions = ["prod","stage01","stage03"];
 
 module.exports.handler = async () => {
 	await clean();
@@ -15,9 +14,10 @@ const clean = async () => {
 	if (functions.length === 0) {
 		functions = await Lambda.listFunctions();
 	}
+
 	// clone the functions that are left to do so that as we iterate with it we
 	// can remove cleaned functions from 'functions'
-	const toClean = functions.filter(x => currentFunctions.includes(x.Lambda));                                    //?
+	const toClean = functions.map(x => x);
 	log.debug(`${toClean.length} functions to clean...`, { 
 		functions: toClean, 
 		count: toClean.length 
